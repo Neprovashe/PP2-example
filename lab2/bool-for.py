@@ -70,3 +70,12 @@ else:
 
 x = 200
 print(isinstance(x, int)) 
+
+
+
+
+#Operators
+
+
+
+print(10 + 5)
