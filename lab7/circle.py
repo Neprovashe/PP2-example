@@ -31,15 +31,19 @@ while True:
     keys = pygame.key.get_pressed()
 
     if keys[pygame.K_UP]:
-        y -= speed
+        if y >= 0:
+            y -= speed
     if keys[pygame.K_DOWN]:
-        y += speed
+        if y <= HEIGHT:
+            y += speed
     if keys[pygame.K_LEFT]:
-        x -= speed
+        if x  >= 0:
+            x -= speed
     if keys[pygame.K_RIGHT]:
-        x += speed
+        if x  <= WIDTH:
+            x += speed
 
-    
+    """
     if x - radius > WIDTH:
         x = -radius
     elif x + radius < 0:
@@ -48,7 +52,7 @@ while True:
         y = -radius
     elif y + radius < 0:
         y = HEIGHT + radius
-
+"""
 
     screen.fill(WHITE)
     pygame.draw.circle(screen, RED, (x, y), radius)

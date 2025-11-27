@@ -59,3 +59,9 @@ def camel_snake(text):
 
 
 print(camel_snake("CamelSnakeCat"))
+
+
+def phone(text):
+    return bool(re.findall(r"^[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]$", text))
+
+print(phone("12345678911"))

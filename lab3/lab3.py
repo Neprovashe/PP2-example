@@ -302,3 +302,10 @@ def average_imdb(movies_list):
 def average_imdb_by_category(movies_list, category):
     category_movies = get_movies_by_category(movies_list, category)
     return average_imdb(category_movies)
+
+def vowels(s):
+    ans = 0
+    for i in s.lower():
+        if i in "aeyuio":
+            ans+=1
+    print(ans)
